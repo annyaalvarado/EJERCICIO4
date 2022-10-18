@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO_1_4.Views.ViewPhotoPage"
+             xmlns:Convertidor="clr-namespace:EJERCICIO_1_4.Helpers">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Convertidor:ByteArrayToImage x:Key="ByteToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Image Source="{Binding photo,  Converter={StaticResource ByteToImage}}" 
+                   BackgroundColor="LightSkyBlue"
+                   HeightRequest="270"
+                   Margin="55,0"/>
+
+
+            <Label> </Label>
+
+
+            <Label Padding="10,10,0,0"  FontAttributes="Bold" Text="Nombre completo" HorizontalTextAlignment="Center" TextColor="#2196F3" FontSize="20"/>
+            <Frame BackgroundColor="White" Padding="24" CornerRadius="0"   >
+                <Label  TextColor="Black" FontSize="20" Text="{Binding name}"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+            </Frame>
+
+            <Label Padding="10,10,0,0"  FontAttributes="Bold" Text="Descripcion" HorizontalTextAlignment="Center" TextColor="#2196F3" FontSize="20"/>
+            <Frame BackgroundColor="White" Padding="24" CornerRadius="0"   >
+                <Label  TextColor="Black" FontSize="20" Text="{Binding description}"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+            </Frame>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

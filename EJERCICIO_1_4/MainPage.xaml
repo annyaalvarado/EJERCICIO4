@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EJERCICIO_1_4.MainPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    
+
+    <StackLayout Spacing="10">
+
+        <Frame BackgroundColor="#2196F3" Padding="20" CornerRadius="0">
+
+            <Label Text="Bienvenidos" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+
+        </Frame>
+
+        <Label FontAttributes="Bold" Text="Menu Principal" FontSize="Title" TextColor="Black" Padding="30,70,30,100" HorizontalTextAlignment="Center"/>
+
+        <Button Text="Registrar nuevo" 
+                CornerRadius="10" 
+                HorizontalOptions="Center"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextTransform="None"
+                WidthRequest="200"
+                x:Name="btnViewRegister"
+                Clicked="btnViewRegister_Clicked"/>
+
+        <Label> </Label>
+        
+        <Button Text="Mostrar Listado" 
+                CornerRadius="10" 
+                HorizontalOptions="Center"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextTransform="None"
+                WidthRequest="200"
+                x:Name="btnViewList"
+                Clicked="btnViewList_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
